@@ -167,8 +167,9 @@ function oath_output($vars) {
     
 	if($_GET['qr']) {
 		require_once('./../modules/addons/oath/phpqrcode/qrlib.php');
+		$user = get_query_val('tbladmins', 'username', "id = ".$_SESSION['adminid']);
 		$company = get_query_val('tblconfiguration', 'value', "setting = 'CompanyName'");
-		QRcode::png('otpauth://totp/' . urlencode(str_replace(' ', '', $company)) . 'Admin?secret=' . $_GET['secret']);
+		QRcode::png('otpauth://totp/' . $user . '?issuer=' . urlencode($company) . '&secret=' . $_GET['secret']);
 		exit(0);
 	}
 	
