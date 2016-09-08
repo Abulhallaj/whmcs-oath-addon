@@ -1,4 +1,10 @@
 <?php
+//
+// Company: ARS NETWORK (M) SDN BHD
+// WebSite: www.ars-network.com
+// eMail: developer@ars-network.com
+// Phone: +60 (3) 8943-1261
+// 
 $_ADDONLANG['incorrect']='کد شما اشتباه است.';
 $_ADDONLANG['enterCodeNote']='لطفا کد تولید شده توسط نرم افزار موبایل را وارد نمایید.';
 $_ADDONLANG['enterCode']='کد را وارد نمایید';
